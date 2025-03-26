@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App with Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>General Knowledge Quiz</h1>
+        
+        <!-- Start Screen -->
+        <div id="start-screen">
+            <div class="instructions">
+                <h2>Quiz Instructions</h2>
+                <p>Welcome to the General Knowledge Quiz!</p>
+                <ul>
+                    <li>This quiz contains 10 multiple-choice questions</li>
+                    <li>You will have <strong>15 seconds per question</strong> (2.5 minutes total)</li>
+                    <li>Once you select an answer, you cannot change it</li>
+                    <li>The quiz will automatically submit when time runs out</li>
+                    <li>Try to answer all questions before the timer expires</li>
+                </ul>
+                <p>Good luck!</p>
+            </div>
+            <button id="start-btn">Start Quiz</button>
+        </div>
+        
+        <!-- Quiz Container (hidden initially) -->
+        <div id="quiz-container" style="display: none;">
+            <div class="timer">Time remaining: <span id="time">02:30</span></div>
+            <div id="question-container"></div>
+            <button id="submit-btn">Next</button>
+        </div>
+        
+        <!-- Results Screen (hidden initially) -->
+        <div id="results" style="display: none;">
+            <h2>Your Results</h2>
+            <p>You scored <span id="score">0</span> out of 10!</p>
+            <p id="result-message"></p>
+            <button id="restart-btn">Take Quiz Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
